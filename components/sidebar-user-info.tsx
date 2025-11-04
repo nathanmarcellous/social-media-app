@@ -23,7 +23,7 @@ export const SidebarUserInfo = () => {
 
   return (
     <div
-      className='absolute bottom-3 flex items-center justify-start space-x-2 xl:p-3 xl:pe-6 hover:bg-gray-500 hover:bg-opacity-10 rounded-full transition cursor-pointer w-fit xl:w-[240px]'
+      className='absolute bottom-3 flex items-center justify-start space-x-2 xl:p-3 xl:pe-6 hover:bg-gray-200 hover:bg-opacity-10 rounded-full transition cursor-pointer w-fit xl:w-[240px]'
       onClick={handleSignOut}
     >
       <Image src={'/assets/profile-pic.png'} width={36} height={36} alt='Profile Picture' className='w-9 h-9' />
