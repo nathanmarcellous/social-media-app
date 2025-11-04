@@ -16,7 +16,7 @@ export const PostInput = () => {
       <div className='w-full'>
         <textarea
           className='resize-none outline-none w-full min-h-[50px] text-lg'
-          placeholder={insideModal ? 'Send your reply' : 'What&apos;s happening!?'}
+          placeholder={insideModal ? 'Send your reply' : "What's happening!?"}
           // onChange={event => setText(event.target.value)}
           // value={text}
         />

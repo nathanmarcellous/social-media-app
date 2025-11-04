@@ -1,5 +1,6 @@
 import { PostFeed } from '@/components/post-feed';
 import { Sidebar } from '@/components/sidebar';
+import { SignupPrompt } from '@/components/signup-prompt';
 import { Widgets } from '@/components/widgets';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <Widgets />
       </div>
 
-      
+      <SignupPrompt />
     </>
   );
 }
