@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Home } from 'lucide-react';
+import { Bell, Bookmark, CircleEllipsis, Hash, Home, Inbox, UserIcon } from 'lucide-react';
 
 import { SidebarItem } from './sidebar-item';
 import { SidebarUserInfo } from './sidebar-user-info';
@@ -13,12 +13,12 @@ export const Sidebar = () => {
         </div>
         <ul>
           <SidebarItem Icon={Home} text='Home' />
-          {/* <SidebarItem Icon={HashtagIcon} text='Explore' />
-          <SidebarItem Icon={BellIcon} text='Notifications' />
-          <SidebarItem Icon={InboxIcon} text='Messages' />
-          <SidebarItem Icon={BookmarkIcon} text='Bookmarks' />
+          <SidebarItem Icon={Hash} text='Explore' />
+          <SidebarItem Icon={Bell} text='Notifications' />
+          <SidebarItem Icon={Inbox} text='Messages' />
+          <SidebarItem Icon={Bookmark} text='Bookmarks' />
           <SidebarItem Icon={UserIcon} text='Profile' />
-          <SidebarItem Icon={EllipsisHorizontalCircleIcon} text='More' /> */}
+          <SidebarItem Icon={CircleEllipsis} text='More' />
           <button className='hidden xl:block bg-[#F4AF01] w-[200px] h-[52px] rounded-full text-white font-medium cursor-pointer shadow-md mt-2'>
             Bumble
           </button>

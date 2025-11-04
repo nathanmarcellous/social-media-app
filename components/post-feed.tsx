@@ -1,12 +1,41 @@
+'use client';
+
 import { PostInput } from './post-input';
+import { db } from '@/firebase';
+import { useDispatch } from 'react-redux';
+import { DocumentData, QueryDocumentSnapshot, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import { closeLoadingScreen } from '@/redux/slices/loading-slice';
+import { Post } from './post';
 
 export const PostFeed = () => {
+  const [posts, setPosts] = useState<QueryDocumentSnapshot<DocumentData, DocumentData>[]>([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const q = query(collection(db, 'posts'), orderBy('timestamp', 'desc'));
+
+    const unsubscribe = onSnapshot(q, snapshot => {
+      const snapshotDocs = snapshot.docs;
+
+      setPosts(snapshotDocs);
+
+      dispatch(closeLoadingScreen());
+    });
+
+    return unsubscribe;
+  }, []);
+
   return (
     <div className='grow max-w-2xl border-x border-gray-100'>
       <div className='py-4 px-3 text-lg sm:text-xl sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-sm font-bold border-b border-gray-100'>
         Home
       </div>
       <PostInput />
+
+      {posts.map(post => (
+        <Post key={post.id} data={post.data()} id={post.id} />
+      ))}
     </div>
   );
 };
