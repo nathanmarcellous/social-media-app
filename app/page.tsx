@@ -1,3 +1,5 @@
+import { LoadingScreen } from '@/components/loading-screen';
+import { CommentModal } from '@/components/modal/comment-model';
 import { PostFeed } from '@/components/post-feed';
 import { Sidebar } from '@/components/sidebar';
 import { SignupPrompt } from '@/components/signup-prompt';
@@ -12,7 +14,9 @@ export default function Home() {
         <Widgets />
       </div>
 
+      <CommentModal />
       <SignupPrompt />
+      <LoadingScreen />
     </>
   );
 }
