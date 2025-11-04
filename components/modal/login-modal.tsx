@@ -21,7 +21,10 @@ export const LoginModal = () => {
     await signInWithEmailAndPassword(auth, email, password);
   };
 
-  const handleGuestLogIn = () => {};
+  const handleGuestLogIn = async () => {
+
+    await signInWithEmailAndPassword(auth, 'guest12345000@gmail.com', '12345678');
+  };
 
   return (
     <>

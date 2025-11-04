@@ -74,7 +74,7 @@ export const Post = ({ data, id }: PostProps) => {
           {data.likes.includes(user.uid) ? (
             <HeartIcon
               className='w-[22px] h-[22px] cursor-pointer
-          text-pink-500 transition
+          text-pink-500 transition fill-pink-500
           '
               onClick={() => likePost()}
             />

@@ -1,13 +1,9 @@
 import { PostHeader } from '@/components/post';
-import { PostFeed } from '@/components/post-feed';
 import { Sidebar } from '@/components/sidebar';
 import { SignupPrompt } from '@/components/signup-prompt';
 import { Widgets } from '@/components/widgets';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { getDoc, doc } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 import {
   ArrowLeft,
   ArrowUpFromLine,
@@ -16,6 +12,8 @@ import {
   Heart,
   MessageCircleMore,
 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const fetchPost = async (id: string) => {
   const postRef = doc(db, 'posts', id);
