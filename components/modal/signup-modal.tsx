@@ -126,14 +126,6 @@ export default function SignUpModal() {
             >
               Sign Up
             </button>
-            <span className='mb-5 text-sm text-center block'>Or</span>
-            <button
-              className='bg-[#F4AF01] text-white h-[48px]
-            rounded-full shadow-md w-full'
-              onClick={() => handleGuestLogIn()}
-            >
-              Log In as Guest
-            </button>
           </div>
         </div>
       </Modal>
