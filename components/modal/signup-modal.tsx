@@ -66,7 +66,7 @@ export default function SignUpModal() {
     <>
       <button
         className=' w-full h-[48px] md:w-[88px] md:h-[40px] text-md md:text-sm font-bold bg-white
-         rounded-full
+         rounded-full cursor-pointer
         '
         onClick={() => dispatch(openSignUpModal())}
       >
@@ -121,10 +121,18 @@ export default function SignUpModal() {
             </div>
             <button
               className='bg-[#F4AF01] text-white h-[48px]
-            rounded-full shadow-md mb-5 w-full'
+            rounded-full shadow-md mb-5 w-full cursor-pointer'
               onClick={() => handleSignUp()}
             >
               Sign Up
+            </button>
+            <span className='mb-5 text-sm text-center block'>Or</span>
+            <button
+              className='bg-[#F4AF01] text-white h-[48px]
+            rounded-full shadow-md w-full cursor-pointer'
+              onClick={() => handleGuestLogIn()}
+            >
+              Log In as Guest
             </button>
           </div>
         </div>

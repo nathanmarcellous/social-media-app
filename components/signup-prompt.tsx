@@ -7,7 +7,6 @@ import SignUpModal from './modal/signup-modal';
 
 export const SignupPrompt = () => {
   const name = useSelector((state: RootState) => state.user.name);
-  console.log(name);
 
   return (
     !name && (

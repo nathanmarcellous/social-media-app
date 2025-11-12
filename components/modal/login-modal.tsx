@@ -22,7 +22,6 @@ export const LoginModal = () => {
   };
 
   const handleGuestLogIn = async () => {
-
     await signInWithEmailAndPassword(auth, 'guest12345000@gmail.com', '12345678');
   };
 
@@ -31,7 +30,7 @@ export const LoginModal = () => {
       <button
         className='
       w-full h-[48px] md:w-[88px] md:h-[40px] text-md md:text-sm  border-2 border-gray-100
-      rounded-full text-white font-bold hover:bg-white hover:bg-opacity-25
+      rounded-full text-white font-bold hover:bg-white hover:text-black cursor-pointer
       transition
       '
         onClick={() => dispatch(openLogInModal())}
@@ -78,10 +77,18 @@ export const LoginModal = () => {
             </div>
             <button
               className='bg-[#F4AF01] text-white h-[48px]
-          rounded-full shadow-md mb-5 w-full'
+          rounded-full shadow-md mb-5 w-full cursor-pointer'
               onClick={() => handleLogIn()}
             >
               Log In
+            </button>
+            <span className='mb-5 text-sm text-center block'>Or</span>
+            <button
+              className='bg-[#F4AF01] text-white h-[48px]
+            rounded-full shadow-md w-full cursor-pointer'
+              onClick={() => handleGuestLogIn()}
+            >
+              Log In as Guest
             </button>
           </div>
         </div>
